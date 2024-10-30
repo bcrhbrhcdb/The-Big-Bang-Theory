@@ -81,3 +81,25 @@ a:visited {
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+/* Basic styles for the select element */
+select {
+  display: inline-block;
+  min-width: 9rem;
+  padding: 10px;
+  border-radius: 0.2rem;
+  border: none;
+  text-align: center;
+  color: #f5d5e0; 
+  background-color: #7b337d; 
+  transition: all 0.3s ease; /* Transition for smooth effect */
+}
+
+select:hover {
+  transform: translateY(-2px); /* Slightly lift when hovered */
+}
+
+/* Custom styles for options */
+option {
+  background-color: #7b337d; /* Same as nav link */
+  color: #f5d5e0; /* Text color */
+}

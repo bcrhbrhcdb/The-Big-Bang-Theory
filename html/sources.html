@@ -11,11 +11,13 @@
     <nav>
       <a href="../index.html">Home</a>
       <a href="vocab.html" >Vocabulary</a>
-      <select onchange="location = this.value;">
-        <option value="">Sources (select a page)</option>
-        <option value="website-stuff.html">HTML, CSS, and Javascript help</option>
-        <option value="information.html">Information</option>
-      </select>
+      <div class="select-wrapper">
+        <select id="animated-select" onchange="location = this.value;">
+            <option value="">Sources (select a page)</option>
+            <option value="html/website-stuff.html">HTML, CSS, and Javascript help</option>
+            <option value="html/information.html">Information</option>
+        </select>
+    </div>
     </nav>
     <main>
       <h1>Sources</h1>
