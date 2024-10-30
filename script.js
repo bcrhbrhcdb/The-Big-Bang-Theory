@@ -1,3 +1,4 @@
+alert("Hey there! I am currently learning web development, and consequently, you asked everyone to make a project on The Big Bang Theory. I just completed a course on Javascript, and I needed to build a project, so thanks for this opportunity! You did say have fun with it. Anyways, after you grade my project, and you don''t have to do this, if you could send me an email on what I did good on making the website, if there were any bugs I could fix, or just general things. It has been good having you as my first 9th grade teacher. Anyways, explore! ");
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const trailElements = ['⭐', '🌎', '🌕', '🪐', '☄️', '🌠', '🌌', '🛸', '👽', '🚀', '🌞', '🌛', '🌜', '🌙', '💫', '✨', '🌟', '🔭', '🛰️'];
