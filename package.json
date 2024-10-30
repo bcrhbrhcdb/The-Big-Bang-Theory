@@ -4,5 +4,20 @@
   },
   "dependencies": {
     "servor": "^4.0.2"
-  }
+  },
+  "name": "the-big-bang-theory",
+  "description": "This is for a science project",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcrhbrhcdb/The-Big-Bang-Theory.git"
+  },
+  "author": "Alex Peterson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcrhbrhcdb/The-Big-Bang-Theory/issues"
+  },
+  "homepage": "https://github.com/bcrhbrhcdb/The-Big-Bang-Theory#readme"
 }
