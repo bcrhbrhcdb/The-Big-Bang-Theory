@@ -66,3 +66,18 @@ a:visited {
   color: #f5d5e0;
   text-decoration: none;
 }
+
+.trail-emoji {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.water-wave {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(218, 138, 139, 0.5);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
