@@ -33,9 +33,21 @@ nav a {
   text-decoration: none;
   color: #f5d5e0;
   background-color: #7b337d;
+  margin: 5px;
   transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
-
+button{
+  display: inline-block;
+  min-width: 9rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: #f5d5e0;
+  background-color: #7b337d;
+  transition: transform 0.3s ease;
+}
 nav a[aria-current='page'] {
   background-color: #c874b2;
   min-width: 10rem;
@@ -44,11 +56,16 @@ nav a[aria-current='page'] {
 nav a:hover {
   transform: translateY(-5px); /* Move up by 5 pixels on hover */
 }
+button{
+  transform: translateY(-5px); /* Move up by 5 pixels on hover */
 
+}
 nav a:active {
   transform: translateY(0); /* Return to original position when active (pressed) */
 }
-
+nav a:active {
+  transform: translateY(0); /* Return to original position when active (pressed) */
+}
 nav a:visited {
   color: #f5d5e0;
 }
@@ -60,6 +77,9 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+  text-align: center;
+  margin: 20px;
+  padding: 5px;
 }
 
 a:visited {
@@ -92,6 +112,7 @@ select {
   color: #f5d5e0; 
   background-color: #7b337d; 
   transition: all 0.3s ease; /* Transition for smooth effect */
+  margin: 5px;
 }
 
 select:hover {
@@ -102,4 +123,154 @@ select:hover {
 option {
   background-color: #7b337d; /* Same as nav link */
   color: #f5d5e0; /* Text color */
+}
+/* Add this to your existing styles.css */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px; /* Rounded corners */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%; /* Circular knob */
+}
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #2196F3; /* Color when checked */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move knob when checked */
+}
+/* Add this to your existing styles.css */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
+.toggle-label {
+  margin-right: 10px; /* Space between label and switch */
+  color: #ffffff; /* Change to match your theme */
+}
+
+/* Adjusted switch styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Smaller width */
+  height: 24px; /* Smaller height */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Default background color */
+  transition: .4s;
+  border-radius: 24px; /* Rounded corners */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Smaller knob height */
+  width: 20px; /* Smaller knob width */
+  left: 2px; /* Adjusted for smaller size */
+  bottom: 2px; /* Adjusted for smaller size */
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%; /* Circular knob */
+}
+
+/* Checked state */
+input:checked + .slider {
+  background-color: #2196F3; /* Color when checked */
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px); /* Move knob when checked */
+}
+
+.changeAlignmentCheckbox{
+  margin: 1rem;
+  padding: 2px;
+}
+
+
+
+
+.heading{
+  background-color: #282157;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+}
+
+.information-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Keep items centered vertically */
+  justify-content: center; /* Keep items centered horizontally */
+  padding: 10px;
+  margin: 5px;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #210535;
+  color: #f5d5e0;
+}
+
+article {
+  width: 100%; /* Allow article to take full width */
+}
+
+.align-left {
+  text-align: left; /* Ensure left alignment for paragraph */
+  text-indent: 40px;
+}
+.image{
+  border: 6.5px solid #430d4b;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
 }

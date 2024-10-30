@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Dropdown</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav>
+        
+        <a href="../index.html">Home</a>
+        <a href="vocab.html">Vocabulary</a>
+        
+        <div class="select-wrapper">
+            <select id="animated-select" onchange="location = this.value;" aria-current="page">
+                <option value="">Sources (select a page)</option>
+                <option value="website-stuff.html" >HTML, CSS, and Javascript help</option>
+                <option value="information.html">Information</option>
+            </select>
+        </div>
+    </nav>
+    <div class="toggle-container">
+        <span class="toggle-label">Enable/Disable Cursor Trail</span>
+        <label class="switch">
+            <input type="checkbox" id="toggle-trail" checked>
+            <span class="slider"></span>
+        </label>
+    </div>
+    <h1>Website-Sources</h1>
+
+
+    <script src="../script.js"></script>
+</body>
+</html>
