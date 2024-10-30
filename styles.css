@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  color: #f5d5e0;
+  background-color: #430d4b;
 }
 
 nav {
@@ -14,10 +14,13 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 10px;
+  margin: 5px;
   gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
-  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  background-color: #210535;
+  color: #f5d5e0;
 }
 
 nav a {
@@ -25,15 +28,29 @@ nav a {
   min-width: 9rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: solid 1px #aaa;
+  border: none;
   text-align: center;
   text-decoration: none;
-  color: #555;
+  color: #f5d5e0;
+  background-color: #7b337d;
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
 }
 
 nav a[aria-current='page'] {
-  color: #000;
-  background-color: #d4d4d4;
+  background-color: #c874b2;
+  min-width: 10rem;
+}
+
+nav a:hover {
+  transform: translateY(-5px); /* Move up by 5 pixels on hover */
+}
+
+nav a:active {
+  transform: translateY(0); /* Return to original position when active (pressed) */
+}
+
+nav a:visited {
+  color: #f5d5e0;
 }
 
 main {
@@ -44,8 +61,8 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
-a:visited{
-  color: black;
-  text-decoration: dashed;
-  text-decoration-line: none;
+
+a:visited {
+  color: #f5d5e0;
+  text-decoration: none;
 }

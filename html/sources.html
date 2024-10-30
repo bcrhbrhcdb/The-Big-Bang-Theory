@@ -11,7 +11,11 @@
     <nav>
       <a href="../index.html">Home</a>
       <a href="vocab.html" >Vocabulary</a>
-      <a href="sources.html" aria-current="page">Sources</a>
+      <select onchange="location = this.value;">
+        <option value="">Sources (select a page)</option>
+        <option value="website-stuff.html">HTML, CSS, and Javascript help</option>
+        <option value="information.html">Information</option>
+      </select>
     </nav>
     <main>
       <h1>Sources</h1>
