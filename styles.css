@@ -86,7 +86,10 @@ a:visited {
   color: #f5d5e0;
   text-decoration: none;
 }
-
+a{
+  color: #f5d5e0;
+  
+}
 .trail-emoji {
   position: fixed;
   pointer-events: none;
@@ -275,4 +278,12 @@ article {
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 5px;
+}
+.highlight {
+  animation: highlightAnimation 2s;
+}
+
+@keyframes highlightAnimation {
+  0% { background-color: yellow; }
+  100% { background-color: transparent; }
 }

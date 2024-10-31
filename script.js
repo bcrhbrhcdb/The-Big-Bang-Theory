@@ -84,25 +84,63 @@ document.addEventListener('DOMContentLoaded', () => {
         trail.length = 0;
     }
 
-   function updateTrailVisibility() {
-       isVisible = document.getElementById('toggle-trail').checked; // Update visibility based on switch state
-       localStorage.setItem('trailVisibility', isVisible);
-       
-       if (!isVisible) {
-           fadeAllPlanets(); // Fade all planets if not visible
-       }
-   }
+    function updateTrailVisibility() {
+        isVisible = document.getElementById('toggle-trail').checked; // Update visibility based on switch state
+        localStorage.setItem('trailVisibility', isVisible);
+        
+        if (!isVisible) {
+            fadeAllPlanets(); // Fade all planets if not visible
+        }
+    }
 
-   document.addEventListener('mousemove', updateTrail);
-   
-   document.addEventListener('click', (e) => {
-       createWaterWave(e.clientX, e.clientY);
-   });
+    document.addEventListener('mousemove', updateTrail);
+    
+    document.addEventListener('click', (e) => {
+        createWaterWave(e.clientX, e.clientY);
+    });
 
-   document.addEventListener('visibilitychange', () => {
-       isVisible = !document.hidden;
-       if (!isVisible) {
-           fadeAllPlanets();
-       }
-   });
+    document.addEventListener('visibilitychange', () => {
+        isVisible = !document.hidden;
+        if (!isVisible) {
+            fadeAllPlanets();
+        }
+    });
+
+    // New function for highlighting
+    function highlightElement(id) {
+        const element = document.getElementById(id);
+        if (element) {
+            // Scroll to the element
+            element.scrollIntoView({ behavior: 'smooth' });
+            
+            // Add highlight class after a short delay
+            setTimeout(() => {
+                element.classList.add('highlight');
+                // Remove the highlight class after animation completes
+                setTimeout(() => {
+                    element.classList.remove('highlight');
+                }, 2000); // Match this to your CSS animation duration
+            }, 500);
+        }
+    }
+
+    // Check for hash in URL and highlight if present
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        highlightElement(targetId);
+    }
+
+    // Add click event listener to all links with class 'scroll-highlight-link'
+    document.querySelectorAll('.scroll-highlight-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Check if the link is to the current page
+            if (link.getAttribute('href').split('#')[0] === window.location.pathname) {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').split('#')[1];
+                highlightElement(targetId);
+                // Update URL without reloading the page
+                history.pushState(null, null, `#${targetId}`);
+            }
+        });
+    });
 });
