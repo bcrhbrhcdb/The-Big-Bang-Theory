@@ -44,23 +44,7 @@
     </article>
 </div>
     <script src="script.js">
-        document.addEventListener('DOMContentLoaded', function() {
-    // Check if there's a hash in the URL
-    if (window.location.hash) {
-        const targetId = window.location.hash.substring(1); // Remove the # from the hash
-        const targetElement = document.getElementById(targetId);
-        
-        if (targetElement) {
-            // Scroll to the element
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-            
-            // Add highlight class after a short delay (to ensure scrolling is complete)
-            setTimeout(function() {
-                targetElement.classList.add('highlight');
-            }, 500);
-        }
-    }
-});
+       
     </script>
 </body>
 </html>

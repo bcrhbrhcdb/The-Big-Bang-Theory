@@ -264,7 +264,10 @@ input:checked + .slider:before {
 }
 
 article {
-  width: 100%; /* Allow article to take full width */
+  width: 100%;
+  font-size: 20px;
+  
+  /* Allow article to take full width */
 }
 
 .align-left {
@@ -286,4 +289,17 @@ article {
 @keyframes highlightAnimation {
   0% { background-color: yellow; }
   100% { background-color: transparent; }
+}
+hr{
+  background-color: #c874b2;
+  border: none;
+  border-radius: 10px;
+  width: 65%;
+  height: 10px;
+}
+.indent-p-element p{
+text-indent: 20px;
+}
+p{
+  font-size: 25px;
 }
