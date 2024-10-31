@@ -240,7 +240,7 @@ input:checked + .slider:before {
   padding: 5px;
 }
 
-.information-text {
+.information-text{
   display: flex;
   flex-wrap: wrap;
   align-items: center; /* Keep items centered vertically */
@@ -316,4 +316,11 @@ p{
   border: 6.5px solid #430d4b;
   border-radius: 5px;
   padding: 10px
+}
+.seperate-paragraphs{
+  margin: 25px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
 }
