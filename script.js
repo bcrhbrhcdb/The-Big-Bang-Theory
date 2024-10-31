@@ -93,6 +93,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function createWaterWave(x, y) {
+        const wave = document.createElement('div');
+        wave.className = 'water-wave';
+        wave.style.position = 'fixed';
+        wave.style.left = `${x}px`;
+        wave.style.top = `${y}px`;
+        wave.style.width = '0';
+        wave.style.height = '0';
+        wave.style.borderRadius = '50%';
+        wave.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+        wave.style.transform = 'translate(-50%, -50%)';
+        wave.style.animation = 'ripple 1s linear';
+        wave.style.pointerEvents = 'none';
+        body.appendChild(wave);
+
+        setTimeout(() => {
+            wave.remove();
+        }, 1000); // Remove the wave after 1 second (matching the animation duration)
+    }
+
     document.addEventListener('mousemove', updateTrail);
     
     document.addEventListener('click', (e) => {
@@ -106,39 +126,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // New function for highlighting
     function highlightElement(id) {
         const element = document.getElementById(id);
         if (element) {
-            // Scroll to the element
             element.scrollIntoView({ behavior: 'smooth' });
             
-            // Add highlight class after a short delay
             setTimeout(() => {
                 element.classList.add('highlight');
-                // Remove the highlight class after animation completes
                 setTimeout(() => {
                     element.classList.remove('highlight');
-                }, 2000); // Match this to your CSS animation duration
+                }, 2000);
             }, 500);
         }
     }
 
-    // Check for hash in URL and highlight if present
     if (window.location.hash) {
         const targetId = window.location.hash.substring(1);
         highlightElement(targetId);
     }
 
-    // Add click event listener to all links with class 'scroll-highlight-link'
     document.querySelectorAll('.scroll-highlight-link').forEach(link => {
         link.addEventListener('click', (e) => {
-            // Check if the link is to the current page
             if (link.getAttribute('href').split('#')[0] === window.location.pathname) {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').split('#')[1];
                 highlightElement(targetId);
-                // Update URL without reloading the page
                 history.pushState(null, null, `#${targetId}`);
             }
         });
