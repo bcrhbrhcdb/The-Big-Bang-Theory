@@ -310,3 +310,10 @@ p{
   pointer-events: none;
   animation: ripple 1s linear;
 }
+.text-image{
+  float: right;
+  margin: 5px;
+  border: 6.5px solid #430d4b;
+  border-radius: 5px;
+  padding: 10px
+}
